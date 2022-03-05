@@ -1,11 +1,11 @@
 data "aws_caller_identity" "current" {}
 
-data "aws_vpc" "selected" {
-  id = var.vpc_id
+data "aws_vpc" {
+  id = "vpc-0d9f4187edd1bbd6b"
 }
 
 data "aws_subnet_ids" "public" {
-  vpc_id = data.aws_vpc.selected.id
+  vpc_id = data.aws_vpc.id
  tags = {
     Name = "*Public*"
   }
