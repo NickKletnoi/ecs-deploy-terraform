@@ -1,4 +1,4 @@
-variable "region" { default = "us-east-2" }
+variable "region" { default = "us-east-1" }
 variable "environment" { default = "" }
 variable "project" { default = "javaweb" }
 variable "platform" { default = "Devops" }
