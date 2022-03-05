@@ -20,7 +20,7 @@ resource "aws_security_group" "allow-internal" {
   }
 
   ingress {
-    cidr_blocks = [data.aws_vpc.selected.cidr_block]
+    cidr_blocks =  ["0.0.0.0/0"]
     from_port   = "80"
     protocol    = "tcp"
     self        = "false"
@@ -28,7 +28,7 @@ resource "aws_security_group" "allow-internal" {
   }
 
   ingress {
-    cidr_blocks = [data.aws_vpc.selected.cidr_block]
+    cidr_blocks =  ["0.0.0.0/0"]
     from_port   = "443"
     protocol    = "tcp"
     self        = "false"
@@ -67,7 +67,7 @@ resource "aws_security_group" "allow-external1" {
   }
 
   name   = "${var.project}-${var.environment}_allow-external"
-  vpc_id = data.aws_vpc.selected.id
+  vpc_id = var.vpc_id
 }
 
 resource "aws_lb_listener" "lb_listener" {
