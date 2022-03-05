@@ -1,6 +1,6 @@
 environment = "test"
 project     = "java-web"
 platform = "Devops"
-vpc_id = "vpc-072ecaa60abe662d4"
+vpc_id = "vpc-0d9f4187edd1bbd6b"
 team = "devops4solutions"
-region ="us-east-2"
+region ="us-east-1"
