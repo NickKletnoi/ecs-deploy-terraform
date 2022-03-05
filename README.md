@@ -2,7 +2,7 @@
 This document will provide you all the details how to configure the github actions to deploy the ECS Service using terraform
 
 
-## Create AWS resources using Terraform###
+## Create AWS resources using Terraform#####
 
 In this workflow, we will deploy an ECS service using following AWS resources 
  1. VPC
