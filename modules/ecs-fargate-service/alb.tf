@@ -36,7 +36,7 @@ resource "aws_security_group" "allow-internal" {
   }
 
   name   = "${var.project}-${var.environment}_allow-internal"
-  vpc_id = data.aws_vpc.selected.id
+  vpc_id = var.vpc_id
 }
 
 resource "aws_security_group" "allow-external1" {
