@@ -19,7 +19,7 @@ resource "aws_lb_target_group" "app" {
   protocol                      = "HTTP"
   slow_start                    = "120"
   target_type                   = "ip"
-  vpc_id                        = data.aws_vpc.selected.id
+  vpc_id                        = "vpc-0d9f4187edd1bbd6b"
 
   lifecycle {
     create_before_destroy = true
