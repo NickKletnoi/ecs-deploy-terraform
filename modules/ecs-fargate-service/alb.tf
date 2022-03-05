@@ -2,7 +2,7 @@
   name               = "${var.project}-${var.environment}"
   load_balancer_type = "application"
   internal           = false
-  subnets          = data.aws_subnet_ids.public.ids
+  ##subnets          = data.aws_subnet_ids.public.ids
 
 
   security_groups = [aws_security_group.allow-internal.id, aws_security_group.allow-external1.id]
