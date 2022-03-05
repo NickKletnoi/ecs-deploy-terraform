@@ -32,5 +32,5 @@ resource "aws_security_group" "allow-external" {
   }
 
   name   = "${var.project}-${var.environment}_allow-external-ecs"
-  vpc_id = data.aws_vpc.selected.id
+  vpc_id = "vpc-0d9f4187edd1bbd6b"
 }
