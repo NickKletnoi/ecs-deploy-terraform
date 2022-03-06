@@ -54,7 +54,7 @@ resource "aws_ecs_task_definition" "app" {
   family                   = "${var.project}-${var.environment}"
   network_mode             = "awsvpc"
   requires_compatibilities = ["FARGATE"]
-  task_role_arn            = aws_iam_role.task.arn
+  task_role_arn            = "arn:aws:iam::537905880537:user/usr_deploy"
   cpu                      = var.cpu
   memory                   = var.memory
   container_definitions = jsonencode([
