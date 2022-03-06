@@ -5,7 +5,7 @@
   subnets          = ["subnet-0c48edfa3ada88bab","subnet-00c835f874cd32dbd"]
 
 
-  security_groups = [aws_security_group.allow-internal.id, aws_security_group.allow-external1.id]
+  security_groups = ["sg-0541729b9d6cc290d"]
 }
 
 
