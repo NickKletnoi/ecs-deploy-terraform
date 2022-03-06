@@ -50,11 +50,11 @@ resource "aws_ecs_service" "service" {
 }
 
 resource "aws_ecs_task_definition" "app" {
-  execution_role_arn       = "arn:aws:iam::537905880537:user/usr_deploy"
+  execution_role_arn       = "aws:iam::537905880537:role/ecs_role_exe"
   family                   = "${var.project}-${var.environment}"
   network_mode             = "awsvpc"
   requires_compatibilities = ["FARGATE"]
-  task_role_arn            = "arn:aws:iam::537905880537:user/usr_deploy"
+  task_role_arn            = "aws:iam::537905880537:role/ecs_role"
   cpu                      = var.cpu
   memory                   = var.memory
   container_definitions = jsonencode([
