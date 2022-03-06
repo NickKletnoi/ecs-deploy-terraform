@@ -50,7 +50,7 @@ resource "aws_ecs_service" "service" {
 }
 
 resource "aws_ecs_task_definition" "app" {
-  execution_role_arn       = aws_iam_role.task.arn
+  execution_role_arn       = "arn:aws:iam::537905880537:user/usr_deploy"
   family                   = "${var.project}-${var.environment}"
   network_mode             = "awsvpc"
   requires_compatibilities = ["FARGATE"]
